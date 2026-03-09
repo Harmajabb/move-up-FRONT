@@ -4,6 +4,7 @@ MoveUp is a fitness training platform that lets users browse workout sessions, p
 
 This repository contains the **frontend** client only. The backend API is maintained in a separate repository.
 
+- Live demo: [https://move-up-front-client.vercel.app](https://move-up-front-client.vercel.app)
 - Original monorepo: [ChickenCodeSchool/Js-Crew809-TeamRocket-P2-G2-moveup](https://github.com/ChickenCodeSchool/Js-Crew809-TeamRocket-P2-G2-moveup)
 - Backend repository: [Harmajabb/move-up-BACK](https://github.com/Harmajabb/move-up-BACK)
 

@@ -4,7 +4,7 @@ import "./Avis.css";
 import type { Exercice } from "../types/types";
 import ExerciceCard from "./ExerciceCard";
 
-const API_BASE_URL = "http://localhost:4000";
+const API_BASE_URL = `${import.meta.env.VITE_API_URL}`;
 
 interface Favorite extends Exercice {}
 

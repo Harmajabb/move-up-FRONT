@@ -32,7 +32,7 @@ const Timer = ({
       const dureeEcoulee = tempsInitialEnSecondes - tempsRestantEnSecondes;
       try {
         const response = await fetch(
-          "http://localhost:4000/api/achievements/track",
+          `${import.meta.env.VITE_API_URL}/api/achievements/track`,
           {
             method: "POST",
             headers: {
@@ -89,7 +89,7 @@ const Timer = ({
     const dureeEcoulee = tempsInitialEnSecondes - tempsRestantEnSecondes;
     try {
       const response = await fetch(
-        "http://localhost:4000/api/achievements/track",
+        `${import.meta.env.VITE_API_URL}/api/achievements/track`,
         {
           method: "POST",
           headers: {

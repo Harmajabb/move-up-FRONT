@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 // import CoachCard from "./CoachCard";
 
-const API_BASE_URL = "http://localhost:4000";
+const API_BASE_URL = `${import.meta.env.VITE_API_URL}`;
 
 function CoachFavoris() {
   const [favoritesCoach, setFavoritesCoach] = useState([]);

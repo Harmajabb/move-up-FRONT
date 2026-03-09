@@ -30,7 +30,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const fetchUtilisateur = async () => {
       try {
-        const reponse = await fetch("http://localhost:4000/api/auth/getme", {
+        const reponse = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/getme`, {
           credentials: "include",
         });
         if (!reponse.ok) {
@@ -62,7 +62,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const logout = async () => {
     try {
-      const reponse = await fetch("http://localhost:4000/api/auth/logout", {
+      const reponse = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/logout`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

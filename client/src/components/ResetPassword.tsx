@@ -17,7 +17,7 @@ function ResetPassword() {
       return;
     }
     try {
-      await fetch("http://localhost:4000/api/auth/reset-password", {
+      await fetch(`${import.meta.env.VITE_API_URL}/api/auth/reset-password`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

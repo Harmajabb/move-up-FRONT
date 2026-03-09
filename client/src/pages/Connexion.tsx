@@ -22,7 +22,7 @@ function Login() {
     }
 
     try {
-      const res = await fetch("http://localhost:4000/api/auth/google-login", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/google-login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +55,7 @@ function Login() {
     e.preventDefault();
     setMessage("");
     try {
-      const response = await fetch("http://localhost:4000/api/auth/login", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

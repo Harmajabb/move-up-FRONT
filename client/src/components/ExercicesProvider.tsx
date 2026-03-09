@@ -22,7 +22,7 @@ export const ExercicesProvider = ({ children }: ExercicesProviderProps) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/exercices");
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/exercices`);
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status}`);
         }
@@ -47,7 +47,7 @@ export const ExercicesProvider = ({ children }: ExercicesProviderProps) => {
     const fetchPlanning = async () => {
       try {
         const res = await fetch(
-          `http://localhost:4000/api/users/${userId}/planning`,
+          `${import.meta.env.VITE_API_URL}/api/users/${userId}/planning`,
         );
         if (!res.ok) {
           console.error("get ne marche pas:", res.status);
@@ -74,7 +74,7 @@ export const ExercicesProvider = ({ children }: ExercicesProviderProps) => {
     //envoyer des donnees
     try {
       const res = await fetch(
-        `http://localhost:4000/api/users/${userId}/planning`,
+        `${import.meta.env.VITE_API_URL}/api/users/${userId}/planning`,
         {
           method: "PUT", //requete put
           headers: {

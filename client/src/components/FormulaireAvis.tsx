@@ -29,7 +29,7 @@ function FormulaireAvis() {
     };
 
     try {
-      const reponse = await fetch("http://localhost:4000/api/reviews/", {
+      const reponse = await fetch(`${import.meta.env.VITE_API_URL}/api/reviews/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dataToSend),

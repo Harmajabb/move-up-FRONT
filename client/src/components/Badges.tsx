@@ -16,13 +16,13 @@ function Badges() {
 
   useEffect(() => {
     // 1. Charger tous les badges
-    fetch("http://localhost:4000/api/badges")
+    fetch(`${import.meta.env.VITE_API_URL}/api/badges`)
       .then((res) => res.json())
       .then((data: Badge[]) => setAllBadges(data))
       .catch((err) => console.error("Erreur lors dur chargement:", err));
 
     if (userId) {
-      fetch(`http://localhost:4000/api/users/${userId}/badges`)
+      fetch(`${import.meta.env.VITE_API_URL}/api/users/${userId}/badges`)
         .then((res) => {
           if (!res.ok) throw new Error("Erreur fetch user badges");
           return res.json();

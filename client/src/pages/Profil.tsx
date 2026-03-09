@@ -95,10 +95,13 @@ function Profil() {
     }
 
     try {
-      const reponse = await fetch(`${import.meta.env.VITE_API_URL}/api/users/${userId}`, {
-        method: "PATCH",
-        body: bodyData,
-      });
+      const reponse = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/users/${userId}`,
+        {
+          method: "PATCH",
+          body: bodyData,
+        },
+      );
 
       if (reponse.ok) {
         setUser((prevUser) => {

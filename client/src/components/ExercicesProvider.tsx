@@ -22,7 +22,9 @@ export const ExercicesProvider = ({ children }: ExercicesProviderProps) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/exercices`);
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/exercices`,
+        );
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status}`);
         }

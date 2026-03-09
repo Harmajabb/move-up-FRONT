@@ -30,9 +30,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const fetchUtilisateur = async () => {
       try {
-        const reponse = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/getme`, {
-          credentials: "include",
-        });
+        const reponse = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/auth/getme`,
+          {
+            credentials: "include",
+          },
+        );
         if (!reponse.ok) {
           console.error("Erreur HTTP:", reponse.status, reponse.statusText);
           throw new Error("La requête pour l'utilisateur a échoué");
@@ -62,13 +65,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const logout = async () => {
     try {
-      const reponse = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/logout`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const reponse = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/auth/logout`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
         },
-        credentials: "include",
-      });
+      );
 
       if (!reponse.ok) {
         console.error("Erreur HTTP:", reponse.status, reponse.statusText);

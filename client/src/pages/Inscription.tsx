@@ -131,25 +131,28 @@ function Register() {
     }
     setMessage("");
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/register`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/auth/register`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            firstname,
+            address,
+            zipcode,
+            city,
+            phone,
+            email,
+            password,
+            usertype,
+            subscription,
+            paymentMethod,
+          }),
         },
-        body: JSON.stringify({
-          name,
-          firstname,
-          address,
-          zipcode,
-          city,
-          phone,
-          email,
-          password,
-          usertype,
-          subscription,
-          paymentMethod,
-        }),
-      });
+      );
 
       if (response.ok) {
         setMessage("Inscription réussie !");

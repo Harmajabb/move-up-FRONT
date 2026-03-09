@@ -3,7 +3,6 @@
 // // import Training from "../../components/Training";
 // import type { Exercice } from "../../types/types";``
 
-
 // /* --------------------------------------------
 //    Remplacer ces IDs par ceux du training prévu
 //    Ordre = ordre d’affichage
@@ -15,7 +14,7 @@
 //   22, 22,
 // ];
 
-// // 
+// //
 // const API_BASE_URL = `${import.meta.env.VITE_API_URL}/api/exercices`;
 
 // function TrainingEx3() {
@@ -66,7 +65,7 @@
 //     { exercices
 //     .map((element, index) => <ExerciceCard key={index} exoData={element} />)
 //     }
-    
+
 //     </>
 //     // <Training
 //     //   title="Training #1" // <-- Titre du training
